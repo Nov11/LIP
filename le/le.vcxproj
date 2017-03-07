@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{3E67B680-F392-432B-B0D3-692914676405}</ProjectGuid>
+    <ProjectGuid>{687CA275-0C13-436F-B2D2-8EE3C7B42B77}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>le</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
@@ -142,6 +142,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Lexer.h" />
+    <ClInclude Include="Parser.h" />
+    <ClInclude Include="Token.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Lexer.cpp" />
+    <ClCompile Include="Parser.cpp" />
+    <ClCompile Include="Token.cpp" />
+    <ClCompile Include="源.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
