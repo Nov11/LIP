@@ -14,6 +14,7 @@ public:
 	void assignCotent(std::string str);
 	void tokenize();
 	Token nextToken();
+	bool tokenized() { return tokenized_; }
 private:
 	void match(std::string str);
 	void error(const std::string& s) { std::cerr << "pos: " << idx_ << " of string: " << str_  << " hint: " << s << std::endl; exit(1); }
@@ -28,5 +29,6 @@ private:
 	bool isLetter() {
 		return (c_ >= 'a' && c_ <= 'z') || (c_ >= 'A' && c_ <= 'Z');
 	}
+	bool tokenized_ = false;
 };
 

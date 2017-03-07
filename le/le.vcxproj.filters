@@ -24,6 +24,12 @@
     <ClInclude Include="Parser.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="LL2Parser.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RingBuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lexer.cpp">
@@ -36,6 +42,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Parser.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LL2Parser.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RingBuffer.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
