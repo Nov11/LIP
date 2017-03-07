@@ -1,6 +1,5 @@
 #include "Lexer.h"
 #include <sstream>
-#include <assert.h>
 Lexer::Lexer()
 {
 }
@@ -13,12 +12,10 @@ Lexer::~Lexer()
 void Lexer::assignCotent(std::string str)
 {
 	str_ = str;
-	tokenized_ = false;
 }
 
 void Lexer::tokenize()
 {
-	tokenized_ = true;
 	if (str_.empty()) {
 		tokens_.clear();
 		return;
@@ -41,10 +38,6 @@ void Lexer::tokenize()
 			tokens_.push_back(Token(Token::TokenType::COMMA, ","));
 			consume();
 			break;
-		case '=':
-			tokens_.push_back(Token(Token::TokenType::EQUAL, "="));
-			consume();
-			break;
 		default:
 			variable();
 		}
@@ -53,7 +46,6 @@ void Lexer::tokenize()
 
 Token Lexer::nextToken()
 {
-	assert(tokenized_ == true);
 	if (tokens_.empty()) {
 		return Token();
 	}

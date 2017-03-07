@@ -4,7 +4,7 @@ Parser::~Parser()
 {
 }
 
-void Parser::matchAndConsume(Token::TokenType type)
+void Parser::match(Token::TokenType type)
 {
 	if (lookAheadToken.type_ == type) {
 		consume();
@@ -20,16 +20,16 @@ void Parser::matchAndConsume(Token::TokenType type)
 void Parser::list()
 {
 	using TT = Token::TokenType;
-	matchAndConsume(TT::LBRACKET);
+	match(TT::LBRACKET);
 	elements();
-	matchAndConsume(TT::RBRACKET);
+	match(TT::RBRACKET);
 }
 
 void Parser::elements()
 {
 	element();
 	while(lookAheadToken.type_ == Token::TokenType::COMMA) {
-		matchAndConsume(Token::TokenType::COMMA);
+		match(Token::TokenType::COMMA);
 		element();
 	}
 }
@@ -40,6 +40,6 @@ void Parser::element()
 		list();
 	}
 	else {
-		matchAndConsume(Token::TokenType::NAME);
+		match(Token::TokenType::NAME);
 	}
 }

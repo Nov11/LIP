@@ -16,19 +16,12 @@ public:
 		NAME,
 		LBRACKET,
 		RBRACKET,
-		COMMA,
-		EQUAL
+		COMMA
 	};
 	static std::vector<std::string> meaning_;
 
 	operator bool() {
 		return (type_ != NONE);
-	}
-	static bool matchToken(TokenType type, Token& token) {
-		if (token.type_ == type) {
-			return true;
-		}
-		return false;
 	}
 };
 
