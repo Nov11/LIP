@@ -143,12 +143,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Lexer.h" />
+    <ClInclude Include="LL2Parser.h" />
     <ClInclude Include="Parser.h" />
+    <ClInclude Include="RingBuffer.h" />
     <ClInclude Include="Token.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lexer.cpp" />
+    <ClCompile Include="LL2Parser.cpp" />
     <ClCompile Include="Parser.cpp" />
+    <ClCompile Include="RingBuffer.cpp" />
     <ClCompile Include="Token.cpp" />
     <ClCompile Include="源.cpp" />
   </ItemGroup>
