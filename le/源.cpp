@@ -35,6 +35,6 @@ int main() {
 
 	std::cout << "\nLL(k) parser" << std::endl;
 	MultiLookAhead p3;
-	std::string test3 = "[a,b] = [c,d] g";
+	std::string test3 = "[a,b] = [c,d]";
 	prt(p3.check(test3), test3);
 }

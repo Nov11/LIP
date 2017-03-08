@@ -17,6 +17,8 @@ public:
 	void matchAndRemoveTokenFromBuff(Token::TokenType type);
 	bool matchType(Token::TokenType type) { bool ret = type == tokenBuff_[idx_].type_; consume(); return ret; }
 	void Probing(bool pro) { probing_ = pro; }
+	int currentPosition() const { return idx_; }
+	void seek(int position) { idx_ += position; }
 private:
 	Lexer& l_;
 	std::vector<Token> tokenBuff_;
