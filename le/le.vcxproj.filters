@@ -30,6 +30,12 @@
     <ClInclude Include="RingBuffer.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="MultiLookAhead.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MLHBuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lexer.cpp">
@@ -48,6 +54,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="RingBuffer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MultiLookAhead.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MLHBuffer.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

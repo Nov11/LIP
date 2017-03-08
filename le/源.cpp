@@ -1,6 +1,14 @@
 #include "Lexer.h"
 #include "Parser.h"
 #include "LL2Parser.h"
+#include "MultiLookAhead.h"
+
+void prt(bool valid, std::string testCase) {
+	std::cout << "\'" << testCase << "\' is ";
+	if (valid) { std::cout << "valid"; }
+	else { std::cout << "not valid"; }
+	std::cout << std::endl;
+}
 int main() {
 	Lexer l;
 	l.assignCotent("[a, b]");
@@ -24,4 +32,9 @@ int main() {
 	if (ll2parser.check(test)) {
 		std::cout << test << " is valid" << std::endl;
 	}
+
+	std::cout << "\nLL(k) parser" << std::endl;
+	MultiLookAhead p3;
+	std::string test3 = "[a,b] = [c,d] g";
+	prt(p3.check(test3), test3);
 }

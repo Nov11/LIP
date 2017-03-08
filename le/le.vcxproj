@@ -144,6 +144,8 @@
   <ItemGroup>
     <ClInclude Include="Lexer.h" />
     <ClInclude Include="LL2Parser.h" />
+    <ClInclude Include="MLHBuffer.h" />
+    <ClInclude Include="MultiLookAhead.h" />
     <ClInclude Include="Parser.h" />
     <ClInclude Include="RingBuffer.h" />
     <ClInclude Include="Token.h" />
@@ -151,6 +153,8 @@
   <ItemGroup>
     <ClCompile Include="Lexer.cpp" />
     <ClCompile Include="LL2Parser.cpp" />
+    <ClCompile Include="MLHBuffer.cpp" />
+    <ClCompile Include="MultiLookAhead.cpp" />
     <ClCompile Include="Parser.cpp" />
     <ClCompile Include="RingBuffer.cpp" />
     <ClCompile Include="Token.cpp" />
